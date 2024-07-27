@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- Meta Information -->
   <meta charset="UTF-8">
@@ -16,49 +17,52 @@
   <!-- Title -->
   <title>Frontend Mentor | Interactive rating component</title>
 </head>
+
 <body class="bg-VeryDarkBlue font-Overpass h-screen flex flex-col items-center justify-center">
-  <!-- Rating state start -->
-   <section id="rating-section" class="flex flex-col justify-center bg-DarkBlue max-w-[420px] m-[30px] md:p-[30px] p-[20px] rounded-[25px]">
-    <div class="flex items-center justify-center bg-[rgb(41,49,60)] w-12 h-12 rounded-full mb-[20px]">
-      <img src="assets/images/icon-star.svg" alt="Icon Star">
-    </div>
-    <div>
-      <h1 class="text-White font-bold text-[1.8rem]">How did we do?</h1>
-      <p class="text-LightGrey md:text-base text-sm my-[10px]">
-        Please let us know how we did with your support request. All feedback is appreciated 
-        to help us improve our offering!
-      </p>
-    </div>
-    <div class="flex items-center justify-center md:space-x-3.5 space-x-4">
-      <button class="button transition-all	duration-300 ease-in-out hover:bg-Orange bg-[rgb(41,49,60)] md:w-16 w-11 md:h-16 h-11 hover:text-DarkBlue text-White rounded-full font-bold md:text-base text-sm">1</button>
-      <button class="button transition-all	duration-300 ease-in-out hover:bg-Orange bg-[rgb(41,49,60)] md:w-16 w-11 md:h-16 h-11 hover:text-DarkBlue text-White rounded-full font-bold md:text-base text-sm">2</button>
-      <button class="button transition-all	duration-300 ease-in-out hover:bg-Orange bg-[rgb(41,49,60)] md:w-16 w-11 md:h-16 h-11 hover:text-DarkBlue text-White rounded-full font-bold md:text-base text-sm">3</button>
-      <button class="button transition-all	duration-300 ease-in-out hover:bg-Orange bg-[rgb(41,49,60)] md:w-16 w-11 md:h-16 h-11 hover:text-DarkBlue text-White rounded-full font-bold md:text-base text-sm">4</button>
-      <button class="button transition-all	duration-300 ease-in-out hover:bg-Orange bg-[rgb(41,49,60)] md:w-16 w-11 md:h-16 h-11 hover:text-DarkBlue text-White rounded-full font-bold md:text-base text-sm">5</button>
-    </div>
-    <button id="submit-btn" class="transition-all	duration-300 ease-in-out hover:bg-White bg-Orange text-VeryDarkBlue text-base uppercase font-bold rounded-full py-[10px] mt-[30px]">Submit</button>
-   </section>
-  <!-- Rating state end -->
+  <main class="w-full flex flex-col items-center justify-center">
+    <!-- Rating state start -->
+    <section id="rating-section" class="flex flex-col justify-center bg-DarkBlue max-w-[420px] m-[30px] md:p-[30px] p-[20px] rounded-[25px]">
+      <div class="flex items-center justify-center bg-[rgb(41,49,60)] w-12 h-12 rounded-full mb-[20px]">
+        <img src="assets/images/icon-star.svg" alt="Icon Star">
+      </div>
+      <div>
+        <h1 class="text-White font-bold text-[1.8rem]">How did we do?</h1>
+        <p class="text-LightGrey md:text-base text-sm my-[10px]">
+          Please let us know how we did with your support request. All feedback is appreciated
+          to help us improve our offering!
+        </p>
+      </div>
+      <div class="flex items-center justify-center md:space-x-3.5 space-x-4">
+        <button class="button transition-all duration-300 ease-in-out hover:bg-Orange bg-[rgb(41,49,60)] md:w-16 w-11 md:h-16 h-11 hover:text-DarkBlue text-White rounded-full font-bold md:text-base text-sm">1</button>
+        <button class="button transition-all duration-300 ease-in-out hover:bg-Orange bg-[rgb(41,49,60)] md:w-16 w-11 md:h-16 h-11 hover:text-DarkBlue text-White rounded-full font-bold md:text-base text-sm">2</button>
+        <button class="button transition-all duration-300 ease-in-out hover:bg-Orange bg-[rgb(41,49,60)] md:w-16 w-11 md:h-16 h-11 hover:text-DarkBlue text-White rounded-full font-bold md:text-base text-sm">3</button>
+        <button class="button transition-all duration-300 ease-in-out hover:bg-Orange bg-[rgb(41,49,60)] md:w-16 w-11 md:h-16 h-11 hover:text-DarkBlue text-White rounded-full font-bold md:text-base text-sm">4</button>
+        <button class="button transition-all duration-300 ease-in-out hover:bg-Orange bg-[rgb(41,49,60)] md:w-16 w-11 md:h-16 h-11 hover:text-DarkBlue text-White rounded-full font-bold md:text-base text-sm">5</button>
+      </div>
+      <button id="submit-btn" class="transition-all	duration-300 ease-in-out hover:bg-White bg-Orange text-VeryDarkBlue text-base uppercase font-bold rounded-full py-[10px] mt-[30px]">Submit</button>
+    </section>
+    <!-- Rating state end -->
 
-  <!-- Thank you state start -->
-   <section id="thank-you-section" class="hidden flex flex-col justify-center bg-DarkBlue max-w-[420px] m-[30px] md:p-[30px] p-[20px] rounded-[25px]">
-    <div class="flex justify-center items-center my-7">
-      <img src="assets/images/illustration-thank-you.svg" alt="Thank You Illustration">
-    </div>
-    <div class="flex items-center justify-center">
-      <p id="selected" class="bg-[rgb(41,49,60)] text-Orange font-normal rounded-full px-[20px] py-[5px] md:text-base text-sm"></p>
-    </div>
-    <div class="flex flex-col justify-center items-center text-center">
-      <h2 class="text-White text-3xl font-normal my-4">Thank you!</h2>
-      <p class="text-LightGrey md:text-base text-sm">
-        We appreciate you taking the time to give a rating. If you ever need more support, 
-        don’t hesitate to get in touch!
-      </p>
-    </div>
-   </section>
-  <!-- Thank you state end -->
-
-  
+    <!-- Thank you state start -->
+    <section id="thank-you-section" class="hidden flex flex-col justify-center bg-DarkBlue max-w-[420px] m-[30px] md:p-[30px] p-[20px] rounded-[25px]">
+      <div class="flex justify-center items-center my-7">
+        <img src="assets/images/illustration-thank-you.svg" alt="Thank You Illustration">
+      </div>
+      <div class="flex items-center justify-center">
+        <p id="selected" class="bg-[rgb(41,49,60)] text-Orange font-normal rounded-full px-[20px] py-[5px] md:text-base text-sm"></p>
+      </div>
+      <div class="flex flex-col justify-center items-center text-center">
+        <h2 class="text-White text-3xl font-normal my-4">Thank you!</h2>
+        <p class="text-LightGrey md:text-base text-sm">
+          We appreciate you taking the time to give a rating. If you ever need more support,
+          don’t hesitate to get in touch!
+        </p>
+      </div>
+    </section>
+    <!-- Thank you state end -->
+  </main>
+  <!-- Custom JS -->
   <script src="assets/js/script.js"></script>
 </body>
+
 </html>
